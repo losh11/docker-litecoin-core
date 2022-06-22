@@ -172,12 +172,12 @@ Depending on the network (mode) the Litecoin Core daemon is running as well as t
 
 Ports can be exposed by mapping all of the available ones (using `-P` and based on what `EXPOSE` documents) or individually by adding `-p`. This mode allows assigning a dynamic port on the host (`-p <port>`) or assigning a fixed port `-p <hostPort>:<containerPort>`.
 
-Example for running a node in `regtest` mode mapping JSON-RPC/REST (18443) and P2P (18444) ports:
+Example for running a node in `regtest` mode mapping JSON-RPC/REST (19443) and P2P (19444) ports:
 
 ```sh
 docker run --rm -it \
-  -p 18443:18443 \
-  -p 18444:18444 \
+  -p 19443:19443 \
+  -p 19444:19444 \
   litecoin-project/litecoin-core \
   -printtoconsole \
   -regtest=1 \
@@ -204,7 +204,7 @@ curl --data-binary '{"jsonrpc":"1.0","id":"1","method":"getnetworkinfo","params"
 
 #### Regtest
 
-- JSON-RPC/REST: 18443 (_since 0.16+_, otherwise _19332_)
+- JSON-RPC/REST: 19443 (_since 0.16+_, otherwise _19332_)
 - P2P: 19444
 
 #### Signet
